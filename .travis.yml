@@ -4,3 +4,7 @@ services:
 
 before_install:
   - docker build -t carlosalonso/docker-react-revisited -f Dockerfile.dev .
+
+script:
+  - docker run -e CI=true carlosalonso/docker-react-revisited npm run test
+  
