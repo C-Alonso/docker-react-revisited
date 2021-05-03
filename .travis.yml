@@ -13,7 +13,7 @@ deploy:
   region: "eu-central-1"
   app: "docker-react-revisited"
   env: "Dockerreactrevisited-env"
-  bucket_name: "dockerreactbucket"
+  bucket_name: "elasticbeanstalk-eu-central-1-784097295211"
   bucket_path: "docker-react-revisited"
   on:
     branch: master
