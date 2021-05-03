@@ -7,4 +7,15 @@ before_install:
 
 script:
   - docker run -e CI=true carlosalonso/docker-react-revisited npm run test
-  
+
+deploy:
+  provider: elasticbeanstalk
+  region: "eu-central-1"
+  app: "docker-react-revisited"
+  env: "Dockerreactrevisited-env"
+  bucket_name: "dockerreactbucket"
+  bucket_path: "docker-react-revisited"
+  on:
+    branch: master
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key: $AWS_SECRET_KEY
